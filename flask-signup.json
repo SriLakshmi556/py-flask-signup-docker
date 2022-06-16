@@ -3,7 +3,7 @@
     "networkMode": "awsvpc",
     "containerDefinitions": [
         {
-            "image": "sreelakshmi555/001:v_%BUILD_NUMBER%",
+            "image": "sreelakshmi555/flask-signup:v_%BUILD_NUMBER%",
             "name": "flask-signup",
             "cpu": 10,
             "memory": 256,
