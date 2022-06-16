@@ -1,5 +1,6 @@
 {
     "family": "flask-signup",
+    "networkMode": "awsvpc",
     "containerDefinitions": [
         {
             "image": "sreelakshmi555/001:v_%BUILD_NUMBER%",
@@ -9,10 +10,15 @@
             "essential": true,
             "portMappings": [
                 {
-                    "containerPort": 5000,
+                    "containerPort": 80,
                     "hostPort": 80
                 }
             ]
         }
-    ]
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512"
 }
