@@ -1,10 +1,10 @@
 {
-    "family": "flask-signup",
+    "family": "sample-fargate",
     "networkMode": "awsvpc",
     "containerDefinitions": [
         {
-            "image": "sreelakshmi555/flask-signup:v_%BUILD_NUMBER%",
-            "name": "flask-signup",
+            "image": "public.ecr.aws/docker/library/httpd:v_%BUILD_NUMBER%",
+            "name": "fargate-app",
             "cpu": 10,
             "memory": 256,
             "essential": true,
