@@ -1,17 +1,17 @@
 {
-    "family": "sample-fargate",
+    "family": "flask-signup",
     "networkMode": "awsvpc",
     "containerDefinitions": [
         {
-            "image": "public.ecr.aws/docker/library/httpd:v_%BUILD_NUMBER%",
-            "name": "fargate-app",
-            "cpu": 10,
-            "memory": 256,
+            "image": "sreelakshmi555/flask-signup:v_%BUILD_NUMBER%",
+            "name": "flask-signup",
+            "cpu": 256,
+            "memory": 512,
             "essential": true,
             "portMappings": [
                 {
-                    "containerPort": 80,
-                    "hostPort": 80
+                    "containerPort": 5000,
+                    "hostPort": 5000
                 }
             ]
         }
